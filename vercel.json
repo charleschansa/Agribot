@@ -1,0 +1,22 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "BotChat/app.py",
+        "use": "@vercel/python",
+        "config": {
+          "runtime": "python3.9"
+        }
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "BotChat/app.py"
+      }
+    ],
+    "env": {
+      "FLASK_ENV": "production"
+    }
+  }
+  
